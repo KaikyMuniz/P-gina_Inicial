@@ -1,0 +1,176 @@
+body{
+    overflow-x: hidden;
+}
+
+header{
+    background-color: transparent;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 95px;
+    display: flex;
+    place-items: center;
+    justify-content: space-around;
+    z-index: 1; /* Defina um valor alto de z-index */
+}
+
+.logo{
+    max-width: 300px;
+    min-width: 200px;
+    margin-right: 7%;
+    font-size: 17px;
+    font-family: "Poppins";
+    color: white;
+}
+
+
+header a{
+    text-decoration: none;
+    font-size: 20px;
+    font-family: "Poppins";
+    color: white;
+    transition: 500ms ease;
+}
+
+header a:hover{
+    box-shadow: #3464cee1 -2px 2px 0px 1px;
+    background-color: #6681fa;
+    padding: 5px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+header .nao-logado-cadastro{
+    background-color: rgb(255, 0, 55);
+    padding: 5px;
+    border-radius: 7px;
+    word-break: normal;
+    display: block;
+    margin-right: 10px;
+}
+
+header .nao-logado-cadastro:hover{
+    box-shadow: rgba(255, 0, 55, 0.822) -2px 2px 0px 1px;
+    padding: 7px;
+    background-color: rgb(236, 0, 51);
+    border-radius: 7px;
+}
+
+header .sair{
+    background-color: rgb(255, 0, 55);
+    padding: 5px;
+    padding-right: 15px;
+    padding-left: 15px;
+    border-radius: 7px;
+}
+
+header .sair:hover{
+    box-shadow: #3464cee1 -2px 2px 0px 1px;
+    background-color: #6681fa;
+    padding: 5px;
+    padding-right: 15px;
+    padding-left: 15px;
+    border-radius: 5px;
+}
+
+header .logado{
+    display: none;
+}
+
+header .perfil{
+    text-align: center;
+    width: 70px;
+    border-radius: 10px;
+    transition: 1s ease;
+    display: none;
+}
+
+header .perfil:hover{
+    box-shadow: #3464cee1 -2px 2px 0px 1px;
+    cursor: pointer;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    place-items: center;
+}
+  
+.nav-list li {
+    margin-left: 70px;
+}
+
+.mobile-menu {
+    position: relative;
+    display: none;
+    cursor: pointer;
+    margin-right: 10px;
+}
+  
+.mobile-menu div {
+    width: 32px;
+    height: 2px;
+    background: #fff;
+    margin: 8px;
+    transition: 0.3s;
+}
+  
+@media (max-width: 999px) {
+    .logo{
+        margin-left: 2%;
+        margin-right: 5%;
+    }
+
+    .nav-list{
+        position: absolute;
+        top: 8vh;
+        right: 0;
+        border-radius: 10px 0 0 10px;
+        width: 50vw;
+        height: 90vh;
+        background: #170b49ec;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        transform: translateX(100%);
+        transition: transform 0.4s ease-in;
+    }
+
+    .nav-list li{
+        margin-left: 0;
+        opacity: 0;
+    }
+
+    .mobile-menu {
+        display: block;
+    }
+  }
+  
+    .nav-list.active {
+        transform: translateX(0);
+}
+  
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+        
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+    
+.mobile-menu.active .line1 {
+    transform: rotate(-45deg) translate(-8px, 8px);
+}
+    
+.mobile-menu.active .line2 {
+    opacity: 0;
+}
+    
+.mobile-menu.active .line3 {
+    transform: rotate(45deg) translate(-5px, -7px);
+}

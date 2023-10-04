@@ -1,0 +1,455 @@
+html{
+    scroll-behavior: smooth;
+}
+
+body, .body2, .body3, .body4{
+    margin: 0;
+    padding: 0;
+    min-width: 100vw;
+    min-height: 100vh;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+header{
+    position:absolute;
+}
+
+#seta_btn1{
+    position: fixed;
+    max-width: 40px;
+    float: right; 
+    margin-bottom: 10px;
+    margin-right: 10px;
+    right: 0px; 
+    bottom: 0;
+    border-radius: 50%;
+    z-index: 2;
+    cursor: pointer;
+}
+
+
+.slideshow-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh; /* Defina a altura desejada para o slideshow */
+    overflow: hidden;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100vw;
+    min-height: 100vh;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+.slide img {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    object-fit: cover;
+    filter: grayscale(0.2);
+}
+
+.slide-text1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 95vw;
+    text-align: center;
+    color: #fff;
+    user-select: none;
+}
+
+.slide-text2 {
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    max-width: 60vw;
+    text-align: center;
+    color: #fff;
+    user-select: none;
+}
+
+.slide-text2 h2{
+    font-family: "Ubuntu";
+    font-style: italic;
+    font-size: 2.5rem;
+}
+
+.slide-text2 p{
+    font-family: "Poppins";
+    font-size: 50px;
+}
+
+.slide-text3 {
+    position: absolute;
+    top: 50%;
+    left: 77%;
+    transform: translate(-50%, -50%);
+    min-width: 600px;
+    text-align: center;
+    color: #fff;
+    user-select: none;
+}
+
+.slide-text4 {
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    max-width: 800px;
+    text-align: center;
+    color: #fff;
+    user-select: none;
+}
+
+.slide-text5 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 98vw;
+    text-align: center;
+    color: #fff;
+    user-select: none;
+}
+
+h2 {
+    font-size: 3rem;
+    font-family: "Poppins";
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 2.7rem;
+    font-family: "Ubuntu";
+}
+
+span label{
+    font-size: 1.5rem;
+    color: white;
+    font-family: "Poppins";
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+span button{
+    background-color: white;
+    color: #2059DB;
+    border-color: transparent;
+    letter-spacing: 1px;
+    padding: 5px;
+    max-width: 200px;
+    font-size: 1.4rem;
+    font-family: "Poppins";
+    border-radius: 5px;
+    transition: 800ms ease;
+}
+
+span button:hover{
+    background-color: #012c8a;
+    color:white;
+    max-width: 220px;
+}
+
+.slides {
+    min-width: 400%;
+    min-height: 20vh;
+    display: flex;
+}
+
+.radio-btn {
+    display: none;
+}
+
+.manual-navigation {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    z-index: 1;
+}
+
+.manual-btn {
+    border: 2px solid #FFF;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+    margin: 0 5px;
+}
+
+.manual-btn:hover,
+input[type="radio"]:checked + label {
+    background-color: white;
+}
+
+.center{
+    display: grid;
+    min-width: 100%;
+    max-height: 25vh;
+    place-items: center;
+    justify-content: center;
+}
+
+.bem-vindo{
+    margin-top: 25px;
+    font-family: "Ubuntu";
+    font-size: 3rem;
+}
+
+.user{
+    font-family: "Poppins";
+    font-size: 3.3rem;
+    font-weight: bold;
+    color: #f1f6ff;
+    cursor: text;
+}
+
+.body2{
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+}
+
+.container{
+    display: flex;
+    place-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+.conteudos{
+    min-width: 90%;
+}
+
+.container h1{
+    font-family: "Poppins";
+    font-size: calc(2.6rem + 1vh);
+    color: white;
+}
+
+.container label{
+    font-family: "Ubuntu";
+    font-size: calc(1.6rem + 1vh);
+    letter-spacing: 1px;
+    margin: 10px;
+    cursor: text;
+    color: white;
+}
+
+.conteudos button{
+    background-color: #FFF;
+    border-color: transparent;
+    max-width: 55vw;
+    min-width: 10vw;
+    padding: 5px;
+    font-size: 1.8rem;
+    font-family: "Poppins";
+    cursor: pointer;   
+    border-radius: 15px;
+    transition: 400ms ease-in;
+}
+
+.conteudos button:hover{
+    background-color: transparent;
+    border: solid;
+    border-radius: 20px;
+    border-width: 2px;
+    border-color: #FFF;
+    color: #FFF;
+}
+
+.conteudo2{
+    height: 100vh;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    background-color: #4139C6;
+}
+
+.conteudo2 button{
+    color: #4139C6
+}
+
+.conteudo3{
+    height: 100vh;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    background-color: #2F67D4;
+}
+
+.conteudo3 button{
+    color: #2F67D4
+}
+
+.conteudo4{
+    height: 100vh;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    background-color: #0076F4;
+}
+
+.conteudo4 button{
+    color:  #0076F4
+}
+
+.img{
+    height: 100vh;
+    width: 50%;
+}
+
+.container img{
+    width: 50vw;
+    height: 100%;
+}
+
+@media (max-width: 999px) {
+
+    body, .body2, .body3, .body4{
+        overflow-x: hidden;
+        overflow-y: visible;
+    }    
+
+    .slide-text1 {
+        min-width: 95vw;
+        max-width: 99vw;
+        max-height: 81vh;
+        min-height: 30vh;
+        text-align: center;
+    }
+
+    .slide-text2{
+        left: 50%;
+        min-width: 95vw;
+        max-width: 99vw;
+        max-height: 82vh;
+        min-height: 50vh;
+        text-align: center;
+    }
+    
+    .slide-text2 h2{
+        font-size: calc(1.4rem + 1vh);   
+    }
+    
+    .slide-text2 p{
+        font-size: calc(1.3rem + 1vh);   
+    }
+
+    h2{
+        font-size: calc(1.4rem + 1vh);
+    }
+
+    p{
+        font-size: calc(1.2rem + 1vh);   
+    }
+    
+    .slide-text3 {
+        top: 50%;
+        left: 50%;
+        position: absolute;
+        text-align: center;
+        min-width: 95vw;
+        max-width: 99vw;
+        max-height: 82vh;
+        min-height: 50vh;
+    }
+    
+    .slide .mobile{
+        filter: contrast(0.8);
+    }
+
+    .slide-text4 {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        min-width: 95vw;
+        max-width: 99vw;
+        max-height: 82vh;
+        min-height: 50vh;
+    }
+    
+    .slide-text5 {
+        top: 50%;
+        left: 50%;
+        min-width: 95vw;
+        max-width: 99vw;
+        max-height: 82vh;
+        min-height: 50vh;
+    }
+
+    .slide-text5 h2{
+        font-size: calc(1.2rem + 1vh);
+    }
+
+    .bem-vindo{
+        margin-top: 25px;
+        font-family: "Ubuntu";
+        font-size: calc(1.4rem + 1vh);
+        max-height: 20vh;
+    }
+    
+    .user{
+        font-family: "Poppins";
+        font-size: calc(1.6rem + 1vh);
+        font-weight: bold;
+        color: #f1f6ff;
+        cursor: text;
+    }
+
+    span{
+        width: 100vw;
+        display: grid;
+        place-items: center;
+    }
+
+    .img2{
+        display: none;
+    }
+
+    .conteudo2{
+        min-width: 100vw;
+    }
+
+    .img3{
+        display: none;
+    }
+
+    .conteudo3{
+        min-width: 100vw;
+    }
+
+    .img4{
+        display: none;
+    }
+
+    .conteudo4{
+        min-width: 100vw;
+    }
+
+    .manual-navigation{
+        bottom: 3vh;
+    }
+}
